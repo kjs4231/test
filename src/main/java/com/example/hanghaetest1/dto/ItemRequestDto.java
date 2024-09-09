@@ -1,4 +1,13 @@
 package com.example.hanghaetest1.dto;
 
-public class RequestDto {
+import lombok.Getter;
+
+@Getter
+public class ItemRequestDto {
+    private String username;
+    private String title;
+    private String content;
+    private int price;
+
+
 }
