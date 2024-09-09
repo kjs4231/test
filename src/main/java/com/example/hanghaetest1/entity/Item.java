@@ -27,7 +27,8 @@ public class Item {
         this.price = price;
     }
 
-    public void update(String title, String content, int price) {
+    public void update(String username,String title, String content, int price) {
+        this.username = username;
         this.title = title;
         this.content = content;
         this.price = price;

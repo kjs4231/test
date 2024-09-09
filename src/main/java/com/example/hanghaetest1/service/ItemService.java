@@ -33,7 +33,7 @@ public class ItemService {
     public ItemResponseDto updateItem(Long id, ItemRequestDto requestDto) {
         Item item = itemRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다."));
 
-        item.update(requestDto.getTitle(), requestDto.getContent(), requestDto.getPrice());
+        item.update(requestDto.getUsername(),requestDto.getTitle(), requestDto.getContent(), requestDto.getPrice());
 
         Item updatedItem = itemRepository.save(item);
         return new ItemResponseDto(updatedItem.getId(), updatedItem.getUsername(), updatedItem.getTitle(), updatedItem.getContent(), updatedItem.getPrice());
