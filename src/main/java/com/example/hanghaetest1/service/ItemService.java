@@ -26,7 +26,7 @@ public class ItemService {
 
     public List<ItemResponseDto> getItems() {
         return itemRepository.findAll().stream()
-                .map(item -> new ItemResponseDto(item.getId(), item.getUsername(), item.getTitle(), item.getContent(), item.getPrice()))
+                .map(item -> new ItemResponseDto(item.getId(), item.getTitle(),item.getUsername(), item.getPrice()))
                 .collect(Collectors.toList());
     }
 
